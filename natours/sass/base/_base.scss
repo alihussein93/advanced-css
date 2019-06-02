@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+/* 
+  Making the root font size 10px is to make our lives easier when using rem unit
+  beacuse 1rem = root font-size = 10px, the root font size is set in html selector
+
+  Now the default browser font-size is 16px and in order to make it more dynamic,
+  we will convert the font size from 16px to 10px using precentage.
+
+  10/16 = 62.5%
+  
+  now the borwser default font-size is 16px will be multiplied by 62.5% 
+  16 * 62.5% = 10px
+*/
+html {
+    font-size: 62.5%;
+}
+body {
+    box-sizing: border-box;
+}
