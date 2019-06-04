@@ -16,9 +16,9 @@
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
         &--front {
             background-color: $color-white;
+            z-index: 10;
         }
         &--back {
-            background-color: green;
             transform: rotateY(180deg);
             &-1 {
                 background-image: linear-gradient(
@@ -58,6 +58,9 @@
         height: 23rem;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+
         &--1 {
             background-image: linear-gradient(
                     to right bottom,
@@ -134,5 +137,26 @@
                 }
             }
         }
+    }
+    // BACK SIDE STYLING
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__price-box {
+        margin-bottom: 8rem;
+        color: $color-white;
+    }
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
